@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="6dof_mani">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import 6dof_mani urdf file -->
+    <xacro:include filename="$(find mani)/urdf/6dof_mani.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="6dof_mani.ros2_control.xacro" />
+
+
+    <xacro:6dof_mani_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

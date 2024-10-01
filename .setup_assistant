@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: mani
+    relative_path: urdf/6dof_mani.xacro
+  srdf:
+    relative_path: config/6dof_mani.srdf
+  package_settings:
+    author_name: alkskd
+    author_email: asdfk@kdjaf.re.kr
+    generated_timestamp: 1727698124
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
